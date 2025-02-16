@@ -1,6 +1,6 @@
 # 🚀 Rev-Droid
 
-**Rev-Droid** is an interactive toolkit for reverse engineering Android apps. It automates tasks such as launching the Android emulator, exporting APKs, decompiling using apktool or JADX, and reverse engineering Flutter apps via Blutter.
+**Rev-Droid** is an interactive toolkit for reverse engineering Android apps. It automates tasks such as launching the Android emulator, exporting APKs, decompiling using apktool or JADX, and reverse engineering Flutter apps using Blutter.
 
 This repository includes two scripts:
 - 📜 `revdroid.sh` – For Unix-based systems (macOS/Linux)
@@ -9,10 +9,10 @@ This repository includes two scripts:
 ## ✨ Features
 
 - 🚀 **Start Android Emulator:** Launch your configured Android Virtual Device (AVD).
-- 📱 **List Installed Apps:** Display third-party applications installed on a connected Android device.
-- 📦 **Export App:** Pull APKs directly from the device using the package name.
+- 📱 **List Installed Apps:** Display apps installed on a connected Android device (uses ADB).
+- 📦 **Export App:** Pull APKs directly from the connected device.
 - 🔍 **Decompile APKs:** Use apktool or JADX to decompile APK files.
-- 🛠️ **Reverse Engineer Flutter Apps:** Decompile Flutter APKs and run the Blutter tool for additional analysis.
+- 🛠️ **Reverse Engineer Flutter Apps:** Decompile Flutter APKs and run the Blutter tool for additional analysis (generate asm and frida scripts).
 
 ## 📋 Prerequisites
 
@@ -45,7 +45,7 @@ This repository includes two scripts:
 1. **Configure the Script:**
   - 📝 Open `revdroid.bat` in a text editor and update:
     - 📂 `EMULATOR_PATH`: Path to your Android emulator executable.
-    - 📱 `AVD_NAME`: Your AVD name.
+    - 📱 `AVD_NAME`: Name of your Android Virtual Device.
     - 📁 `BLUTTER_DIR`: Path to your Blutter tool directory.
 
 2. **Run the Batch File:**
