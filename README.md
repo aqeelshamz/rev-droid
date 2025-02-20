@@ -1,4 +1,4 @@
-# 🚀 Rev-Droid
+# 🚀 RevDroid
 
 **Rev-Droid** is an interactive toolkit for reverse engineering Android apps. It automates tasks such as launching the Android emulator, exporting APKs, decompiling using apktool or JADX, and reverse engineering Flutter apps using Blutter.
 
