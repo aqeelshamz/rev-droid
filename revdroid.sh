@@ -232,6 +232,16 @@ reverse_engineer_flutter() {
   show_menu
 }
 
+# Function to create a test key file for signing APKs
+create_test_key_file() {
+  echo ""
+  echo "🔑 Creating test Key file..."
+  keytool -genkey -v -keystore "$OUTPUT_DIR/test.keystore" -storepass android -alias androiddebugkey -keypass android -keyalg RSA -keysize 2048 -validity 10000 -dname "CN=Android Debug,O=Android,C=US"
+  echo "✅ Key file created: $OUTPUT_DIR/test.keystore"
+  echo ""
+  show_menu
+}
+
 # Main Menu
 show_menu() {
   echo ""
@@ -245,6 +255,7 @@ show_menu() {
   echo "6) 📂 Decompile APK (apktool)"
   echo "7) 📂 Decompile APK (JADX)"
   echo "8) 🛠️ Reverse Engineer Flutter App"
+  echo "9) 🔑 Create test Key file"
   echo ""
   echo "Type 'exit' to quit or press Ctrl+C (Cmd+C on macOS)."
   echo ""
@@ -261,6 +272,7 @@ show_menu() {
     6) decompile_file_apktool ;;
     7) decompile_file_jadx ;;
     8) reverse_engineer_flutter ;;
+    9) create_test_key_file ;;
     exit)
       echo "Goodbye!"
       exit 0
